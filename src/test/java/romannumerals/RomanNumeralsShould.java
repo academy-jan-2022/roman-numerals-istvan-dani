@@ -1,36 +1,23 @@
 package romannumerals;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RomanNumeralsShould {
 
-    @Test
-    void convert_1_to_I() {
+    @ParameterizedTest
+    @CsvSource({"1, I",
+                "2, II",
+                "3, III"
+    })
+    void convert_number_to_roman_numeral(int number, String romanNumeral){
         RomanNumerals romanNumerals = new RomanNumerals();
 
-        String result = romanNumerals.convert(1);
+        String result = romanNumerals.convert(number);
 
-        assertEquals("I", result);
-    }
-
-    @Test
-    void convert_2_to_II() {
-        RomanNumerals romanNumerals = new RomanNumerals();
-
-        String result = romanNumerals.convert(2);
-
-        assertEquals("II", result);
-    }
-
-    @Test
-    void convert_3_to_III() {
-        RomanNumerals romanNumerals = new RomanNumerals();
-
-        String result = romanNumerals.convert(3);
-
-        assertEquals("III", result);
+        assertEquals(romanNumeral, result);
     }
 
 }
