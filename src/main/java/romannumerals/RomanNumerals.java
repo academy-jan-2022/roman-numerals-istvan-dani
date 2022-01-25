@@ -4,12 +4,22 @@ public class RomanNumerals {
     public String convert(int input) {
         StringBuilder result = new StringBuilder();
 
-        if (input >= 5) {
-            result.append("V");
-            input = input -5;
+        for (RomanTranslator romanTranslator : RomanTranslator.values()) {
+            while (input >= romanTranslator.translation) {
+                result.append(romanTranslator);
+                input -= romanTranslator.translation;
+            }
         }
-        result.append("I".repeat(input));
 
         return result.toString();
+    }
+
+    private enum RomanTranslator {
+        X(10), V(5), I(1);
+        private final int translation;
+
+        RomanTranslator(int translation) {
+            this.translation = translation;
+        }
     }
 }
