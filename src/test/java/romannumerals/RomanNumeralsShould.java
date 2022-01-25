@@ -10,7 +10,9 @@ class RomanNumeralsShould {
     @ParameterizedTest
     @CsvSource({
         "1, I",
-        "2, II"
+        "2, II",
+        "3, III",
+        "4, IV"
     })
     void convert_number_to_roman_numeral(int number, String romanNumeral) {
         RomanNumerals romanNumerals = new RomanNumerals();
