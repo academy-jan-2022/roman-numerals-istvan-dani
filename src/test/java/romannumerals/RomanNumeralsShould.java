@@ -13,8 +13,9 @@ class RomanNumeralsShould {
         "2, II",
         "3, III",
         "4, IV",
-        "5, V"
-    })
+        "5, V",
+        "6, VI"
+K   })
     void convert_number_to_roman_numeral(int number, String romanNumeral) {
         RomanNumerals romanNumerals = new RomanNumerals();
 
