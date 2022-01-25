@@ -15,7 +15,7 @@ public class RomanNumerals {
     }
 
     private enum RomanTranslator {
-        L(50),X(10), V(5), I(1);
+        L(50), X(10), V(5), IV(4), I(1);
         private final int translation;
 
         RomanTranslator(int translation) {
