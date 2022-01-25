@@ -2,10 +2,16 @@ package romannumerals;
 
 public class RomanNumerals {
     public String convert(int input) {
-        if(input == 2){
-            return "II";
-        }
+        StringBuilder result = new StringBuilder();
 
-        return "I";
+        for (int i = 1; i<=input; i++) {
+            result.append("I");
+        }
+//
+//        if(input == 2){
+//            return "II";
+//        }
+
+        return result.toString();
     }
 }
