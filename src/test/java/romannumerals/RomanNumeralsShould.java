@@ -8,15 +8,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class RomanNumeralsShould {
 
     @ParameterizedTest
-    @CsvSource({"1, I",
-                "2, II",
-                "3, III",
-                "5, V",
-                "6,VI",
-                "10, X",
-                "50,L"
+    @CsvSource({
+        "1, I",
+        "2, II",
+        "3, III",
+        "4, IV",
+        "5, V",
+        "6,VI",
+        "10, X",
+        "50,L"
     })
-    void convert_number_to_roman_numeral(int number, String romanNumeral){
+    void convert_number_to_roman_numeral(int number, String romanNumeral) {
         RomanNumerals romanNumerals = new RomanNumerals();
 
         String result = romanNumerals.convert(number);
