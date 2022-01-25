@@ -2,9 +2,14 @@ package romannumerals;
 
 public class RomanNumerals {
     public String convert(int input) {
-        if (input == 5)
-            return "V";
+        StringBuilder result = new StringBuilder();
 
-        return "I".repeat(input);
+        if (input >= 5) {
+            result.append("V");
+            input = input -5;
+        }
+        result.append("I".repeat(input));
+
+        return result.toString();
     }
 }
