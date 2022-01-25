@@ -11,4 +11,12 @@ class RomanNumeralsShould {
         RomanNumerals romanNumerals = new RomanNumerals();
         assertEquals("I",romanNumerals.convert(1));
     }
+
+    @Test
+    void convert_2_to_II() {
+        RomanNumerals romanNumerals = new RomanNumerals();
+
+        assertEquals("II", romanNumerals.convert(2));
+    }
+
 }
